@@ -13,18 +13,20 @@
     
     <!--- Seo Part-->
     
-    <link rel="canonical" href="http://iinin.me/"/>
+    <link rel="canonical" href="http://iinin.me/2016/07/25/江西移动电信云免服务器搭建及openvpn配置/"/>
     <meta name="robots" content="index,follow">
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
     
-        <meta name="description" content="想到什么就写点什么吧...或许以后会看到">
-<meta property="og:type" content="website">
-<meta property="og:title" content="’s Memory">
-<meta property="og:url" content="http://iinin.me/index.html">
+        <meta name="description" content="本文仅供个人学习交流，请勿用于非法用途,否则后果作者概不负责 一、免流原理 运营商为了用户方便，设置了访问部分网站或应用所使用流量为免费流量，而运营商在识别访问的网站或应用是否为这一类网站或应用时由于”X-Online-Host”字段识别错误，导致计费系统误认为用户访问的是这一类网站或应用。OpenVPN免流时，实际会先通过HTTP代理，然后再建立VPN，在建立HTTP代理时，让运营商计费系统识别">
+<meta property="og:type" content="article">
+<meta property="og:title" content="江西移动电信云免服务器搭建及OPENVPN配置">
+<meta property="og:url" content="http://iinin.me/2016/07/25/%E6%B1%9F%E8%A5%BF%E7%A7%BB%E5%8A%A8%E7%94%B5%E4%BF%A1%E4%BA%91%E5%85%8D%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%E5%8F%8AOPENVPN%E9%85%8D%E7%BD%AE/index.html">
 <meta property="og:site_name" content="’s Memory">
-<meta property="og:description" content="想到什么就写点什么吧...或许以后会看到">
+<meta property="og:description" content="本文仅供个人学习交流，请勿用于非法用途,否则后果作者概不负责 一、免流原理 运营商为了用户方便，设置了访问部分网站或应用所使用流量为免费流量，而运营商在识别访问的网站或应用是否为这一类网站或应用时由于”X-Online-Host”字段识别错误，导致计费系统误认为用户访问的是这一类网站或应用。OpenVPN免流时，实际会先通过HTTP代理，然后再建立VPN，在建立HTTP代理时，让运营商计费系统识别">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2016-07-24T16:00:00.000Z">
+<meta property="article:modified_time" content="2019-06-06T10:28:14.865Z">
 <meta property="article:author" content="fyu0h">
 <meta name="twitter:card" content="summary">
     
@@ -37,6 +39,8 @@
     <!--- Page Info-->
     
     <title>
+        
+            江西移动电信云免服务器搭建及OPENVPN配置 -
         
         ‘s Memory
     </title>
@@ -265,63 +269,6 @@
 <main class="page-container" id="swup">
 
     
-        
-    <style>
-        .home-banner-container {
-            background: none !important;
-        }
-        .home-article-item,
-        .sidebar-links,
-        .sidebar-content,
-        a.page-number,
-        a.extend,
-        .sidebar-links .links:hover,
-        .right-bottom-tools,
-        footer.footer {
-            background-color: var(--background-color-transparent-80) !important;
-        }
-        .right-bottom-tools:hover,
-        a.page-number:hover,
-        a.extend:hover {
-            background-color: var(--primary-color) !important;
-        }
-        .site-info,
-        .home-article-sticky-label {
-            background-color: var(--background-color-transparent-15) !important;
-        }
-        .home-article-sticky-label {
-            backdrop-filter: none !important;
-        }
-    </style>
-    <div class="home-banner-background transition-fade fixed top-0 left-0 w-screen h-screen scale-125 sm:scale-110 box-border will-change-transform bg-cover">
-        <img src="/images/wallhaven-wqery6-light.webp" alt="home-banner-background" class="w-full h-full object-cover dark:hidden">
-        <img src="/images/wallhaven-wqery6-dark.webp" alt="home-banner-background" class="w-full h-full object-cover hidden dark:block">
-    </div>
-
-
-<div class="home-banner-container flex justify-center items-center transition-fade relative">
-    
-    <div class="content mt-8 flex flex-col justify-center items-center">
-        <div class="description flex flex-col justify-center items-center w-screen font-medium text-center"
-        
-        >
-            ’s Memory
-            
-            
-                <p><i id="subtitle"></i></p>
-            
-        </div>
-        
-    </div>
-    <script>
-        const scrollToMain = ()=> {
-            console.log('scroll');
-            const target = document.querySelector('.main-content-container');
-            target.scrollIntoView({ behavior: 'smooth'});
-        }
-    </script>
-</div>
-    
 
     <div class="main-content-container">
 
@@ -329,13 +276,13 @@
         <div class="main-content-header">
             <header class="navbar-container px-6 md:px-12">
 
-    <div class="navbar-content has-home-banner">
+    <div class="navbar-content ">
         <div class="left">
             
             <a class="logo-title" href="/">
-                <h1>
+                
                 ‘s Memory
-                </h1>
+                
             </a>
         </div>
 
@@ -349,7 +296,7 @@
 
                             <li class="navbar-item">
                                 <!-- Menu -->
-                                <a class="active"
+                                <a class=""
                                    href="/"
                                         >
                                     <i class="fa-regular fa-house fa-fw"></i>
@@ -400,7 +347,7 @@
 
                     <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
                         
-                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full active"
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
                            href="/"
                         >
                             <span>
@@ -466,484 +413,224 @@
         <div class="main-content-body">
 
             
-                <div class="home-sidebar-container">
-    <div class="sticky-container sticky">
-        
-        
-            
-            <div class="sidebar-content" >
-                <div class="avatar flex justify-center">
-    <img src="/images/logo.jpg">
-</div>
-                <div class="author flex flex-col justify-center my-2.5 mx-0">
-    <div class="name">fyu0h</div>
-    
-        <div class="label">Lv3</div>
-    
-</div>
-                <div class="statistics flex justify-around my-2.5">
-    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/tags">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">0</div>
-        <div class="label text-third-text-color text-sm">标签</div>
-    </a>
-    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/categories">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">0</div>
-        <div class="label text-third-text-color text-sm">分类</div>
-    </a>
-    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">21</div>
-        <div class="label text-third-text-color text-sm">文章</div>
-    </a>
-</div>
-            </div>
-        
-
-    </div>
-</div>
-
-            
 
             <div class="main-content">
 
                 
-                    <div class="home-content-container">
-    <ul class="home-article-list">
+                    <div class="post-page-container flex relative justify-between box-border w-full h-full">
+    <div class="article-content-container">
+
+        <div class="article-title relative w-full">
+            
+                <div class="w-full flex items-center pt-6 justify-start">
+                    <h1 class="article-title-regular text-second-text-color text-4xl md:text-6xl font-bold px-2 sm:px-6 md:px-8 py-3">江西移动电信云免服务器搭建及OPENVPN配置</h1>
+                </div>
+            
+            </div>
+
         
-            <li class="home-article-item">
-
-                
-
-                
-
-                
-                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
-                    <h3 class="home-article-title">
-                        <a href="/2019/08/25/ESXI%E8%99%9A%E6%8B%9F%E6%9C%BA%E4%B8%8B%E9%83%A8%E7%BD%B2iKuai%E4%B8%BB%E8%B7%AF%E7%94%B1+LEDE%E6%8A%98%E8%85%BE%E7%AC%94%E8%AE%B0/">
-                            ESXI虚拟机下部署iKuai主路由+LEDE折腾笔记
-                        </a>
-                    </h3>
-
-                    <div class="home-article-content markdown-body">
+            <div class="article-header flex flex-row gap-2 items-center px-2 sm:px-6 md:px-8">
+                <div class="avatar w-[46px] h-[46px] flex-shrink-0 rounded-medium border border-border-color p-[1px]">
+                    <img src="/images/logo.jpg">
+                </div>
+                <div class="info flex flex-col justify-between">
+                    <div class="author flex items-center">
+                        <span class="name text-default-text-color text-lg font-semibold">fyu0h</span>
                         
-                            由于AC86U刷Koolshare Merlin后，跑上网插件实在是太不稳定了，经常需要去后台切换节点（节点正常）。一台好的路由应该是放在角落默默上灰尘，让你感受不到它的存在，天天要我去后台这算咋回事呀…正巧最近Youtube给我推荐了一些关于软路由...
+                            <span class="author-label ml-1.5 text-xs px-2 py-0.5 rounded-small text-third-text-color border border-shadow-color-1">Lv3</span>
                         
                     </div>
-
-                    <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Sun Aug 25 2019 00:00:00 GMT+0800">
-                
-                    2019-08-25
-                
-            </span>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fa-regular fa-pen-fancy"></i>&nbsp;
+        <span class="desktop">2016-07-25</span>
+        <span class="mobile">2016-07-25</span>
+        <span class="hover-info">创建</span>
+    </span>
+    
+        <span class="article-date article-meta-item">
+            <i class="fa-regular fa-wrench"></i>&nbsp;
+            <span class="desktop">2019-06-06 18:28:14</span>
+            <span class="mobile">2019-06-06 18:28:14</span>
+            <span class="hover-info">更新</span>
         </span>
-        
-        
-    </div>
+    
 
-    <a href="/2019/08/25/ESXI%E8%99%9A%E6%8B%9F%E6%9C%BA%E4%B8%8B%E9%83%A8%E7%BD%B2iKuai%E4%B8%BB%E8%B7%AF%E7%94%B1+LEDE%E6%8A%98%E8%85%BE%E7%AC%94%E8%AE%B0/">阅读全文<span class="seo-reader-text">ESXI虚拟机下部署iKuai主路由+LEDE折腾笔记</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+    
+    
+
+    
+    
+    
+    
 </div>
 
-                </div>
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                
-
-                
-                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
-                    <h3 class="home-article-title">
-                        <a href="/2019/06/07/%E4%B8%83%E7%89%9B%E4%BA%91%E6%B5%8B%E8%AF%95%E5%9F%9F%E5%90%8D%E5%88%B0%E6%9C%9F%E5%A4%B1%E6%95%88%E5%90%8E%EF%BC%8C%E4%B8%8B%E8%BD%BD%E7%A9%BA%E9%97%B4%E6%96%87%E4%BB%B6%E5%8A%9E%E6%B3%95/">
-                            七牛云测试域名到期失效后，下载空间文件办法
-                        </a>
-                    </h3>
-
-                    <div class="home-article-content markdown-body">
-                        
-                            七牛云很久前更改了政策，测试域名到期后必须绑定备案域名才能继续使用，这导致空间中的文件既不能通过外链下载，也不能通过管理后台下载。而且由于我的是.me域名，国内目前暂时无法备案，所以没办法，只能通过七牛的qshell把失效空间中的文件下载下来。
-
-参...
-                        
                     </div>
-
-                    <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Fri Jun 07 2019 18:52:55 GMT+0800">
-                
-                    2019-06-07
-                
-            </span>
-        </span>
-        
-        
-    </div>
-
-    <a href="/2019/06/07/%E4%B8%83%E7%89%9B%E4%BA%91%E6%B5%8B%E8%AF%95%E5%9F%9F%E5%90%8D%E5%88%B0%E6%9C%9F%E5%A4%B1%E6%95%88%E5%90%8E%EF%BC%8C%E4%B8%8B%E8%BD%BD%E7%A9%BA%E9%97%B4%E6%96%87%E4%BB%B6%E5%8A%9E%E6%B3%95/">阅读全文<span class="seo-reader-text">七牛云测试域名到期失效后，下载空间文件办法</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
-</div>
-
                 </div>
+            </div>
+        
+
+        
+
+
+        <div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
+            <p>本文仅供个人学习交流，请勿用于非法用途,否则后果作者概不负责</p>
+<p>一、免流原理</p>
+<p>运营商为了用户方便，设置了访问部分网站或应用所使用流量为免费流量，而运营商在识别访问的网站或应用是否为这一类网站或应用时由于”X-Online-Host”字段识别错误，导致计费系统误认为用户访问的是这一类网站或应用。OpenVPN免流时，实际会先通过HTTP代理，然后再建立VPN，在建立HTTP代理时，让运营商计费系统识别用户是和运营商的免流网站或应用建立的代理，这样就实现了所谓的”免流”。</p>
+<p>二、服务器搭建</p>
+<p>安装环境：阿里云 CentOS 6.5 64位</p>
+<p>安装OpenVPN</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">wget http://123.206.6.17/WVPN/VPN</span><br><span class="line">sh VPN</span><br></pre></td></tr></table></figure></div>
+
+<p>安装mproxy</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">wget http://123.206.6.17/mp/mproxy</span><br><span class="line">chmod 777 mproxy</span><br><span class="line">./mproxy -l 8080 -d</span><br></pre></td></tr></table></figure></div>
+
+<p>验证 <code>abc123</code></p>
+<p>三、OpenVPN模式</p>
+<p>江西电信测试可用模式</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">#免流模式</span><br><span class="line">http-proxy ip 8080</span><br><span class="line">http-proxy-option EXT1 &quot;CONNECT dl.music.189.cn:443 HTTP/1.1&quot;</span><br><span class="line">http-proxy-option EXT1 &quot;GET http://dl.music.189.cn/ HTTP/1.1&quot;</span><br><span class="line">http-proxy-option EXT1 &quot;Host: dl.music.189.cn&quot;</span><br><span class="line">http-proxy-option EXT1 &quot;Lbxx: 127.0.0.1:443&quot;</span><br><span class="line">#免流模式</span><br></pre></td></tr></table></figure></div>
+
+<p>南昌移动测试可用模式</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">#免流模式</span><br><span class="line">http-proxy ip 8080</span><br><span class="line">http-proxy-option EXT1 &quot;GET http://wap.10086.cn/ HTTP/1.1&quot;</span><br><span class="line">http-proxy-option EXT1 &quot;Host: wap.10086.cn&quot;</span><br><span class="line">http-proxy-option EXT1 &quot;X-Online-Host: wap.10086.cn&quot;</span><br><span class="line">http-proxy-option EXT1 &quot;Lbxx: 127.0.0.1:443&quot;</span><br><span class="line">#免流模式</span><br></pre></td></tr></table></figure></div>
+        </div>
+
+        
+            <div class="post-copyright-info w-full my-8 px-2 sm:px-6 md:px-8">
+                <div class="article-copyright-info-container">
+    <ul>
+        <li><strong>标题:</strong> 江西移动电信云免服务器搭建及OPENVPN配置</li>
+        <li><strong>作者:</strong> fyu0h</li>
+        <li><strong>创建于
+                :</strong> 2016-07-25 00:00:00</li>
+        
+            <li>
+                <strong>更新于
+                    :</strong> 2019-06-06 18:28:14
             </li>
         
-            <li class="home-article-item">
+        <li>
+            <strong>链接:</strong> http://iinin.me/2016/07/25/江西移动电信云免服务器搭建及OPENVPN配置/
+        </li>
+        <li>
+            <strong>
+                版权声明:
+            </strong>
+            
 
-                
-
-                
-
-                
-                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
-                    <h3 class="home-article-title">
-                        <a href="/2017/11/11/%E5%BF%B5%E4%B8%83%E5%B9%B4/">
-                            念七年
-                        </a>
-                    </h3>
-
-                    <div class="home-article-content markdown-body">
-                        
-                            是的，就在今天我弄丢了我的七年。
-我清楚的知道现在所发生的一切都是我犯下的错误所导致的，我清楚的知道原因，但是我没有勇气去改正。我只能安慰自己，其实七年时光对于我而言并没有那么重要，就让它随着我的青年年华一起消逝在过去。
-自欺欺人？这是我正在做的事情...
-                        
-                    </div>
-
-                    <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Sat Nov 11 2017 18:16:51 GMT+0800">
-                
-                    2017-11-11
-                
-            </span>
-        </span>
-        
-        
-    </div>
-
-    <a href="/2017/11/11/%E5%BF%B5%E4%B8%83%E5%B9%B4/">阅读全文<span class="seo-reader-text">念七年</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
-</div>
-
-                </div>
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                
-
-                
-                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
-                    <h3 class="home-article-title">
-                        <a href="/2017/05/21/%E5%85%8D%E6%B5%81%E5%8F%AF%E7%94%A8%E8%AE%B0%E5%BD%95/">
-                            免流可用记录
-                        </a>
-                    </h3>
-
-                    <div class="home-article-content markdown-body">
-                        
-                            ####江西移动概况：http部分可全免，https由于host和谐故而无解
-
-&#x3D;&#x3D;√Tiny&#x3D;&#x3D;
-123456789101112131415161718192021222324#10.1-10.9内网可免ht...
-                        
-                    </div>
-
-                    <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Sun May 21 2017 23:15:36 GMT+0800">
-                
-                    2017-05-21
-                
-            </span>
-        </span>
-        
-        
-    </div>
-
-    <a href="/2017/05/21/%E5%85%8D%E6%B5%81%E5%8F%AF%E7%94%A8%E8%AE%B0%E5%BD%95/">阅读全文<span class="seo-reader-text">免流可用记录</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
-</div>
-
-                </div>
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                
-
-                
-                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
-                    <h3 class="home-article-title">
-                        <a href="/2017/04/17/WORDPRESS%E8%BF%81%E7%A7%BB%E8%87%B3GHOST%E7%AC%94%E8%AE%B0/">
-                            WORDPRESS迁移至GHOST笔记
-                        </a>
-                    </h3>
-
-                    <div class="home-article-content markdown-body">
-                        
-                            　由于最近购买了一台512M的OVZ主机，为了能在OVZ上使用BBR无奈只能选择通过嵌套虚拟机，但UML太吃内存了小鸡完全受不了，故而萌发了更换一个更为轻量博客系统的想法，最后确定选择Ghost。
-####Ghost安装　　使用了一键脚本 
-选择 M...
-                        
-                    </div>
-
-                    <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Mon Apr 17 2017 00:00:00 GMT+0800">
-                
-                    2017-04-17
-                
-            </span>
-        </span>
-        
-        
-    </div>
-
-    <a href="/2017/04/17/WORDPRESS%E8%BF%81%E7%A7%BB%E8%87%B3GHOST%E7%AC%94%E8%AE%B0/">阅读全文<span class="seo-reader-text">WORDPRESS迁移至GHOST笔记</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
-</div>
-
-                </div>
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                
-
-                
-                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
-                    <h3 class="home-article-title">
-                        <a href="/2017/04/16/KMS%E6%9C%8D%E5%8A%A1-%E4%B8%80%E5%8F%A5%E5%91%BD%E4%BB%A4%E6%BF%80%E6%B4%BBWINDOWS-OFFICE/">
-                            KMS服务~一句命令激活WINDOWS/OFFICE
-                        </a>
-                    </h3>
-
-                    <div class="home-article-content markdown-body">
-                        
-                            服务器地址：iinin.me
-Winodws激活:
-1.以管理员方式运行CMD
-2.依次输入下列命令:
-12slmgr /skms iinin.meslmgr /ato
-
-Office激活
-请看下文中详细教程
-服务作用：在线激活windows和off...
-                        
-                    </div>
-
-                    <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Sun Apr 16 2017 00:00:00 GMT+0800">
-                
-                    2017-04-16
-                
-            </span>
-        </span>
-        
-        
-    </div>
-
-    <a href="/2017/04/16/KMS%E6%9C%8D%E5%8A%A1-%E4%B8%80%E5%8F%A5%E5%91%BD%E4%BB%A4%E6%BF%80%E6%B4%BBWINDOWS-OFFICE/">阅读全文<span class="seo-reader-text">KMS服务~一句命令激活WINDOWS/OFFICE</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
-</div>
-
-                </div>
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                
-
-                
-                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
-                    <h3 class="home-article-title">
-                        <a href="/2017/04/16/PERMITTED/">
-                            root用户删除文件提示：operation
-                        </a>
-                    </h3>
-
-                    <div class="home-article-content markdown-body">
-                        
-                            前段时间安装Wordpress过程中使用lnmp vhost生成了多个站点目录，今天看到这些多余目录时候想删除，但是使用Root用户进行删除操作之时系统却提示没有权限，点解？
-123[root@li1594-180 www]# rm -r -I /w...
-                        
-                    </div>
-
-                    <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Sun Apr 16 2017 00:00:00 GMT+0800">
-                
-                    2017-04-16
-                
-            </span>
-        </span>
-        
-        
-    </div>
-
-    <a href="/2017/04/16/PERMITTED/">阅读全文<span class="seo-reader-text">root用户删除文件提示：operation</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
-</div>
-
-                </div>
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                
-
-                
-                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
-                    <h3 class="home-article-title">
-                        <a href="/2017/01/09/%E6%B1%9F%E8%A5%BF%E5%9C%B0%E5%8C%BA%E8%BF%90%E8%90%A5%E5%95%86%E8%AE%A1%E8%B4%B9%E7%B3%BB%E7%BB%9F%E6%A3%80%E6%B5%8B%E4%BC%98%E5%85%88%E7%BA%A7/">
-                            江西地区运营商计费系统检测优先级
-                        </a>
-                    </h3>
-
-                    <div class="home-article-content markdown-body">
-                        
-                            江西移动
-HTTPM&gt;H&gt;XH
-HTTPSH&gt;M&gt;XH
-江西电信
-HTTP检测机制XH&gt;首头&gt;H
-HTTPS检测机制H&gt;首头&gt;XH
-江西联通
-HTTPM&gt;H,XH不检测
-HTTPSM&gt;H&g...
-                        
-                    </div>
-
-                    <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Mon Jan 09 2017 00:00:00 GMT+0800">
-                
-                    2017-01-09
-                
-            </span>
-        </span>
-        
-        
-    </div>
-
-    <a href="/2017/01/09/%E6%B1%9F%E8%A5%BF%E5%9C%B0%E5%8C%BA%E8%BF%90%E8%90%A5%E5%95%86%E8%AE%A1%E8%B4%B9%E7%B3%BB%E7%BB%9F%E6%A3%80%E6%B5%8B%E4%BC%98%E5%85%88%E7%BA%A7/">阅读全文<span class="seo-reader-text">江西地区运营商计费系统检测优先级</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
-</div>
-
-                </div>
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                
-
-                
-                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
-                    <h3 class="home-article-title">
-                        <a href="/2017/01/05/WORDPRESS%E6%90%AC%E5%AE%B6-%E9%85%8D%E7%BD%AESSL%E7%AC%94%E8%AE%B0/">
-                            WORDPRESS搬家+配置SSL笔记
-                        </a>
-                    </h3>
-
-                    <div class="home-article-content markdown-body">
-                        
-                            之前一直放在阿里云的虚拟主机，最近想给博客弄个HTTPS，由于虚拟主机不支持配置SSL，所以只能选择搬到Linode的日本服务器，使用Centos 7 x64系统。
-一、环境安装
-1.Lnmp环境安装
-我使用的是lnmp.org的一键安装脚本
-123...
-                        
-                    </div>
-
-                    <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Thu Jan 05 2017 00:00:00 GMT+0800">
-                
-                    2017-01-05
-                
-            </span>
-        </span>
-        
-        
-    </div>
-
-    <a href="/2017/01/05/WORDPRESS%E6%90%AC%E5%AE%B6-%E9%85%8D%E7%BD%AESSL%E7%AC%94%E8%AE%B0/">阅读全文<span class="seo-reader-text">WORDPRESS搬家+配置SSL笔记</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
-</div>
-
-                </div>
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                
-
-                
-                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
-                    <h3 class="home-article-title">
-                        <a href="/2017/01/03/RPROXY%E6%90%AD%E5%BB%BA%E5%8F%8A%E5%AF%B9%E6%AF%94/">
-                            ZPROXY TINYPROXY RPROXY搭建及对比
-                        </a>
-                    </h3>
-
-                    <div class="home-article-content markdown-body">
-                        
-                            安装运行安装环境:Centos 6.x x64
-##rProxyrProxy下载 
-解压后将RProxy-Admin、RProxy这两个复制到usr&#x2F;etc，其余文件复制root并赋予777权限
-安装nodejs并启动rProxy
-12yu...
-                        
-                    </div>
-
-                    <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Tue Jan 03 2017 00:00:00 GMT+0800">
-                
-                    2017-01-03
-                
-            </span>
-        </span>
-        
-        
-    </div>
-
-    <a href="/2017/01/03/RPROXY%E6%90%AD%E5%BB%BA%E5%8F%8A%E5%AF%B9%E6%AF%94/">阅读全文<span class="seo-reader-text">ZPROXY TINYPROXY RPROXY搭建及对比</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
-</div>
-
-                </div>
-            </li>
-        
+            
+                本文章采用 <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0">CC BY-NC-SA 4.0</a> 进行许可。
+            
+        </li>
     </ul>
-
-    <div class="home-paginator px-7 py-5">
-        <div class="paginator">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/"><i class="fa-regular fa-angle-right"></i></a>
 </div>
+
+            </div>
+        
+
+        
+
+        
+
+        
+            <div class="article-nav my-8 flex justify-between items-center px-2 sm:px-6 md:px-8">
+                
+                    <div class="article-prev border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
+                        <a class="prev"
+                        rel="prev"
+                        href="/2016/10/01/15-05%E5%8D%95%E7%BA%BF%E5%A4%9A%E6%8B%A8%E6%95%99%E7%A8%8B/"
+                        >
+                            <span class="left arrow-icon flex justify-center items-center">
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </span>
+                            <span class="title flex justify-center items-center">
+                                <span class="post-nav-title-item">网件WNDR3800 使用OPENWRT CHAOS CALMER 15.05单线多拨教程</span>
+                                <span class="post-nav-item">上一篇</span>
+                            </span>
+                        </a>
+                    </div>
+                
+                
+                    <div class="article-next border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
+                        <a class="next"
+                        rel="next"
+                        href="/2016/04/22/%E5%BE%AE%E4%BF%A1%E5%A4%A7%E8%BD%AC%E7%9B%98%E5%85%8D%E6%89%AB%E7%A0%81%E6%95%99%E7%A8%8B/"
+                        >
+                            <span class="title flex justify-center items-center">
+                                <span class="post-nav-title-item">微信大转盘免扫码教程(已失效)</span>
+                                <span class="post-nav-item">下一篇</span>
+                            </span>
+                            <span class="right arrow-icon flex justify-center items-center">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+
+        
+            <div class="comment-container px-2 sm:px-6 md:px-8 pb-8">
+                <div class="comments-container mt-10 w-full ">
+    <div id="comment-anchor" class="w-full h-2.5"></div>
+    <div class="comment-area-title w-full my-1.5 md:my-2.5 text-xl md:text-3xl font-bold">
+        评论
+    </div>
+    
+
+        
+            
+    <div id="waline"></div>
+    <script type="module" data-swup-reload-script>
+      import { init } from '/js/libs/waline.mjs';
+
+      function loadWaline() {
+        init({
+          el: '#waline',
+          serverURL: 'https://waline-n5wa6iqru-fyu0hs-projects.vercel.app/',
+          lang: 'zh-CN',
+          dark: 'body[class~="dark-mode"]',
+          requiredMeta: ['nick', 'mail'],
+          emoji: [],
+          recaptchaV3Key: "wasd",
+          
+        });
+      }
+
+      if (typeof swup !== 'undefined') {
+        loadWaline();
+      } else {
+        window.addEventListener('DOMContentLoaded', loadWaline);
+      }
+    </script>
+
+
+
+        
+    
+</div>
+
+            </div>
+        
+    </div>
+
+    
+        <div class="toc-content-container">
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <div class="toc-title">此页目录</div>
+        <div class="page-title">江西移动电信云免服务器搭建及OPENVPN配置</div>
+        
 
     </div>
 </div>
+        </div>
+    
+</div>
 
-                    <div class="comment-container pjax"></div>
+
+
                 
 
             </div>
@@ -1008,6 +695,27 @@ HTTPSM&gt;H&g...
         </div>
     </div>
 
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="article-tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="right-bottom-tools page-aside-toggle">
+                <i class="fa-regular fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+            <li class="go-comment">
+                <i class="fa-regular fa-comments"></i>
+            </li>
+        
+    </ul>
+</div>
+
+        </div>
     
 
     <div class="right-side-tools-container">
@@ -1092,7 +800,6 @@ HTTPSM&gt;H&g...
         containers: ["#swup"],
     });
 </script>
-
 
 
 
